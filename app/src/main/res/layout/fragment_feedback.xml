@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/darkblue"
+    android:layout_height="match_parent"
+    tools:context=".CFragments.FeedbackFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Feedback "
+        app:navigationIcon="@drawable/backarrow"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/toolbar"/>
+
+    <EditText
+        android:id="@+id/edFeedback"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:hint="Your feedback help us to improve the app"
+        android:textColor="@color/white"
+        android:textColorHint="#B8B8B8"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:textSize="17sp"
+        android:padding="7dp"
+        android:background="@drawable/icon_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15sp"
+        android:backgroundTint="@color/blue"
+        android:text="Submit Feedback"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="@+id/edFeedback"
+        app:layout_constraintTop_toBottomOf="@+id/edFeedback" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:background="@drawable/icon_bg"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="@+id/edFeedback"
+        app:layout_constraintStart_toEndOf="@+id/submit"
+        app:layout_constraintTop_toTopOf="@+id/submit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "403839797360",
+    "project_id": "assistease-6e7a5",
+    "storage_bucket": "assistease-6e7a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403839797360:android:fc1e1150f05ccb094a0cb5",
+        "android_client_info": {
+          "package_name": "com.example.assistease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiXCjqGKGHy9GCAsHcciVkrap_uec7Dw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

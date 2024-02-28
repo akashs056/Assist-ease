@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/darkblue"
+    tools:context=".CFragments.ObjectDetection">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/detect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15sp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/blue"
+        android:text="Detect"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="RealTime Object Detection"
+        app:navigationIcon="@drawable/backarrow"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Point your camera at anything and hear the description"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="15sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/realtimef"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="5dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15sp"
+        android:layout_marginTop="15sp"
+        android:backgroundTint="@color/blue"
+        android:text="Start"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/detect"
+        app:layout_constraintStart_toStartOf="@+id/detect"
+        app:layout_constraintTop_toBottomOf="@+id/detect" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
