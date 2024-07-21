@@ -110,9 +110,23 @@ class VoiceControl : Fragment() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-            }
+            }voiceCommand!!.startsWith("navigate to ", ignoreCase = true) -> {
+            val destination = voiceCommand.substringAfter("navigate to ").trim()
+            navigateToFragment(destination)
+        }
             // Add more commands as needed
             else -> Toast.makeText(requireContext(), "Command not recognized", Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun navigateToFragment(fragmentName: String) {
+        when (fragmentName.toLowerCase(Locale.getDefault())) {
+            "feedback" -> findNavController().navigate(R.id.action_homeFragment2_to_feedbackFragment)
+            "settings" -> findNavController().navigate(R.id.action_homeFragment2_to_settings2)
+            "audionavigation" -> findNavController().navigate(R.id.action_homeFragment2_to_audioNavigation2)
+            "textreader" -> findNavController().navigate(R.id.action_homeFragment2_to_textReader)
+            "objectdetection" -> findNavController().navigate(R.id.action_homeFragment2_to_objectDetection2)
+            "voicecontrol" -> findNavController().navigate(R.id.action_homeFragment2_to_voiceControl2)
+            else -> Toast.makeText(requireContext(), "Fragment not found: $fragmentName", Toast.LENGTH_SHORT).show()
         }
     }
     // Make a call

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.assistease.R
@@ -18,7 +19,22 @@ class FeedbackFragment : Fragment() {
     ): View {
         binding= FragmentFeedbackBinding.inflate(inflater,container,false)
         onBackClicked()
+        onSubmitClicked()
+        onCancelledClicked()
         return binding.root
+    }
+
+    private fun onCancelledClicked() {
+        binding.cancel.setOnClickListener {
+            binding.edFeedback.text=null
+        }
+    }
+
+    private fun onSubmitClicked() {
+        binding.submit.setOnClickListener {
+            binding.edFeedback.text=null
+            Toast.makeText(requireContext(),"Feedback Submitted",Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun onBackClicked() {
